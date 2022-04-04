@@ -1,21 +1,24 @@
+html {
+    margin: 0;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: sans-serif;
     background-color: lightseagreen;
+    margin: 0;
 }
 
-/* HEADER */
-header {
+/* Navigation Bar */
+.navigation-bar {
     padding: 1em 13em;
-}
-
-/* NAVIGATION */
-.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.nav-logo {
+.navigation-bar-logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,21 +31,94 @@ header {
     border-radius: 50%;
 }
 
-#logo-text {
+.navigation-bar-logo a {
     font-size: 24px;
     font-weight: 900;
     color: white;
-    display: inline;
+    text-decoration: none;
 }
 
-.nav-menu ul {
+.navigation-bar-menu ul {
     list-style-type: none;
     display: flex;
     gap: 1.5em;
 }
 
-.nav a {
+.navigation-bar-menu a {
     font-size: 18px;
     color: white;
     text-decoration: none;
+}
+
+/* Recipe Section */
+.recipe-list {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 72px;
+    padding: 1em 13em;
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.recipe-image {
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px black;
+    object-fit: cover;
+}
+
+.recipe-card a {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    flex-wrap: wrap;
+    max-width: 200px;
+    text-decoration: none;
+}
+
+/* Recipe Page */
+.recipe-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 13em;
+}
+.recipe-page-image {
+    width: 400px;
+    height: 400px;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px black;
+    object-fit: cover;
+}
+
+.recipe-page-instructions {
+    color: white;
+}
+
+.recipe-page-instructions h1, h2 {
+    text-align: center;
+}
+
+.recipe-page-instructions a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    padding: 24px;
+    text-align: center;
+    color: black;
+    background-color: white;
 }
