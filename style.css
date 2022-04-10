@@ -12,7 +12,7 @@ body {
 
 /* Navigation Bar */
 .navigation-bar {
-    padding: 1em 13em;
+    padding: 1em 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,11 +27,12 @@ body {
 
 #logo {
     height: 72px;
-    margin-left: 24px;
     border-radius: 50%;
+    display: flex;
 }
 
 .navigation-bar-logo a {
+    display: flex;
     font-size: 24px;
     font-weight: 900;
     color: white;
@@ -91,23 +92,35 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 1em 13em;
+    padding: 1em 1em;
 }
 .drink-page-image {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     border: 2px solid white;
     border-radius: 8px;
     box-shadow: 2px 2px 3px black;
     object-fit: cover;
+    align-items: center;
+    margin: 1em 1em;
 }
 
 .drink-page-instructions {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
     color: white;
+    align-items: center;
 }
 
 .drink-page-instructions h1, h2 {
     text-align: center;
+}
+
+.drink-page-instructions li {
+    text-align: left;
 }
 
 .drink-page-instructions a {
