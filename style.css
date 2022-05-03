@@ -51,6 +51,24 @@ body {
     text-decoration: none;
 }
 
+/* Search Bar */
+.search-bar input[type=text] {
+    width:300px;
+    height:25px;
+    padding-left: 10px;
+    border-radius: 25px;
+    border: none;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+    padding: 1em 13em;
+}
+
 /* Drink Section */
 .drink-list {
     display: flex;
