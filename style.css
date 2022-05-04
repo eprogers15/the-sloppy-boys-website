@@ -52,7 +52,7 @@ body {
 }
 
 /* Search Bar */
-.search-bar input[type=text] {
+.search-bar input[type=search] {
     width:300px;
     height:25px;
     padding-left: 10px;
