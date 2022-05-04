@@ -4,6 +4,7 @@ function searchFunction() {
     input.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             event.preventDefault();
+            document.getElementById("searchInput").blur()
         }
     });
     filter = input.value.toUpperCase();
