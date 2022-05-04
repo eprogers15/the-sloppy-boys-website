@@ -1,6 +1,11 @@
 function searchFunction() {
     let input, filter, li, a, txtValue;
     input = document.getElementById("searchInput");
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+        }
+    });
     filter = input.value.toUpperCase();
     li = document.getElementsByClassName("drink-card");
     for (i = 0; i < li.length; i++) {

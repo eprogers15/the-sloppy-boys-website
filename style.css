@@ -115,6 +115,8 @@ body {
 .drink-page-image {
     width: 350px;
     height: 350px;
+    max-width: 100%;
+    display: block;
     border: 2px solid white;
     border-radius: 8px;
     box-shadow: 2px 2px 3px black;
@@ -145,6 +147,7 @@ body {
 
 .drink-page-instructions li {
     text-align: left;
+    margin: 0px 1em;
 }
 
 .drink-page-instructions a {
