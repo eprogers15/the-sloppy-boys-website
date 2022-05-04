@@ -12,7 +12,7 @@ body {
 
 /* Navigation Bar */
 .navigation-bar {
-    padding: 1em 1em;
+    padding: 1em 2em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -66,7 +66,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 72px;
-    padding: 1em 13em;
+    padding: 1em 8em;
 }
 
 /* Drink Section */
@@ -75,7 +75,7 @@ body {
     justify-content: center;
     flex-flow: row wrap;
     gap: 72px;
-    padding: 1em 13em;
+    padding: 1em 8em;
 }
 
 .drink-card {
