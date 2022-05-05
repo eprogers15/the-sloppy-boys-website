@@ -51,9 +51,20 @@ body {
     text-decoration: none;
 }
 
-/* Search Bar */
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2em;
+}
+
+.search-bar {
+    gap: 1.5em;
+}
+
 .search-bar input[type=search] {
-    width:300px;
+    width:200px;
     height:35px;
     font-size: 16px;
     padding-left: 15px;
@@ -61,13 +72,16 @@ body {
     border: none;
 }
 
-.search-bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 72px;
-    padding: 1em 8em;
+.sort-button {
+    gap: 1.5em;
+}
+
+.sort-button select {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    border-radius: 25px;
+    border: none;
 }
 
 /* Drink Section */

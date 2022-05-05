@@ -19,3 +19,43 @@ function searchFunction() {
         }
     }
 }
+
+function sortFunction() {
+    if (this.options[this.selectedIndex].value == "ascending") {
+        let li, i, switching, shouldSwitch;
+        switching = true;
+        while (switching) {
+            switching = false;
+            li = document.getElementsByClassName("drink-card");
+            for (i = 0; i < (li.length - 1); i++) {
+                shouldSwitch = false;
+                if (li[i].innerHTML.toLowerCase() > li[i + 1].innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+            if (shouldSwitch) {
+                li[i].parentNode.insertBefore(li[i + 1], li[i]);
+                switching = true
+            }
+        }
+    } else if (this.options[this.selectedIndex].value == "descending") {
+        let li, i, switching, shouldSwitch;
+        switching = true;
+        while (switching) {
+            switching = false;
+            li = document.getElementsByClassName("drink-card");
+            for (i = 0; i < (li.length - 1); i++) {
+                shouldSwitch = false;
+                if (li[i].innerHTML.toLowerCase() < li[i + 1].innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+            if (shouldSwitch) {
+                li[i].parentNode.insertBefore(li[i + 1], li[i]);
+                switching = true
+            }
+        }
+    }
+}
