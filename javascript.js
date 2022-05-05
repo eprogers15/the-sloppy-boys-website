@@ -21,7 +21,7 @@ function searchFunction() {
 }
 
 function sortFunction() {
-    if (this.options[this.selectedIndex].value == "ascending") {
+    if (this.options[this.selectedIndex].value == "alpha_ascending") {
         let li, i, switching, shouldSwitch;
         switching = true;
         while (switching) {
@@ -39,7 +39,7 @@ function sortFunction() {
                 switching = true
             }
         }
-    } else if (this.options[this.selectedIndex].value == "descending") {
+    } else if (this.options[this.selectedIndex].value == "alpha_descending") {
         let li, i, switching, shouldSwitch;
         switching = true;
         while (switching) {
@@ -48,6 +48,42 @@ function sortFunction() {
             for (i = 0; i < (li.length - 1); i++) {
                 shouldSwitch = false;
                 if (li[i].innerHTML.toLowerCase() < li[i + 1].innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+            if (shouldSwitch) {
+                li[i].parentNode.insertBefore(li[i + 1], li[i]);
+                switching = true
+            }
+        }
+    } else if (this.options[this.selectedIndex].value == "date_new-to-old") {
+        let li, i, switching, shouldSwitch;
+        switching = true;
+        while (switching) {
+            switching = false;
+            li = document.getElementsByClassName("drink-card");
+            for (i = 0; i < (li.length - 1); i++) {
+                shouldSwitch = false;
+                if (li[i].getElementsByTagName("p")[0].getAttribute("id") < li[i + 1].getElementsByTagName("p")[0].getAttribute("id")) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+            if (shouldSwitch) {
+                li[i].parentNode.insertBefore(li[i + 1], li[i]);
+                switching = true
+            }
+        }
+    } else if (this.options[this.selectedIndex].value == "date_old-to-new") {
+        let li, i, switching, shouldSwitch;
+        switching = true;
+        while (switching) {
+            switching = false;
+            li = document.getElementsByClassName("drink-card");
+            for (i = 0; i < (li.length - 1); i++) {
+                shouldSwitch = false;
+                if (li[i].getElementsByTagName("p")[0].getAttribute("id") > li[i + 1].getElementsByTagName("p")[0].getAttribute("id")) {
                     shouldSwitch = true;
                     break;
                 }
